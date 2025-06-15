@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: yii2-backend
+    env: php
+    repo: https://github.com/IsaacCanoH/Backend_Yii2.git
+    buildCommand: composer install --no-dev
+    startCommand: php -S 0.0.0.0:10000 -t web
+    plan: free
+    envVars:
+      - key: YII_ENV
+        value: prod
+      - key: YII_DEBUG
+        value: false
